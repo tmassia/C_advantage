@@ -7,7 +7,7 @@
 #pragma warning (disable: 4996)	/* hide warning*/
 
 set A, B, C, D, E, F;
-//משתנים חיצוניים מוגדרים במקום      extern
+//   extern
 
 
 bool validate_set_name(char setName) {
@@ -141,80 +141,7 @@ char extract_set_name_comp(char** remainingInput)
 
 
 
-//bool process_numbers_and_fill_set(char* str, set* targetSet) {
-//    bool errorOccurred = false;
-//    int num = 0;
-//    bool negative = false;
-//    bool numberStarted = false;
-//    bool finishedCorrectly = false;
-//    set tempSet; // temporary set 
-//    initialize_set(&tempSet); // init for temp st
-//    for (; *str; str++) {
-//        if (*str == ',' || *str == ' ' || *str == '\n' || *str == '\0') {
-//            if (numberStarted)
-//            {
-//                // check if number is in diapasone of 0-127
-//                if (!negative && (num >= 0 && num < 128))
-//                {
-//                    tempSet.elements[num / 8] |= (1 << (num % 8)); // adding number to set 
-//                    num = 0; // prepare for new number,null init
-//                    negative = false;
-//                    numberStarted = false;
-//                }
-//                else if (negative && num == 1)
-//                {
-//                    finishedCorrectly = true;
-//                    //return !errorOccurred;
-//                }
-//                else
-//                {
-//                    printf("%d is out of range \n", negative ? -num : num); //ternary operator for check what a kind of mistake,prepare output
-//                    errorOccurred = true;
-//                    return false;
-//                }
-//
-//            }
-//        }
-//        else if (is_digit(*str)) {
-//            numberStarted = true; // start reading number
-//            num = num * 10 + (*str - '0');
-//        }// forming number from sequence of numbers in string 
-//        else if (*str == '-') {
-//            negative = true; // flag if nefative
-//            numberStarted = true;
-//        }
-//        else if (is_letter(*str)) {
-//            printf("Letters are not allowed for usage as a numbers,please try again. \n");
-//            return false;
-//
-//        }
-//        else if (is_symbol(*str)) {
-//            printf("Special characters are not allowed,please try again.\n");
-//            return false;
-//        }
-//        else {
-//            printf("Unknown error.Try again.\n");
-//            return false;
-//        }
-//    }
-//    if (!finishedCorrectly) { // check if set completed correctcty with -1 in the end
-//        printf("Set completed incorrectly. Please finish the set with number -1 to save set data, try again.\n");
-//        return false;
-//    }
-//    else if (!errorOccurred) {
-//        // if no errors copy from tempset to regular (as ptr to targetset)
-//        for (int i = 0; i < MAX_SET_SIZE; i++) {
-//            targetSet->elements[i] = tempSet.elements[i];
-//        }
-//    }
-//    else {
-//        printf("unknown input");
-//        return false;
-//
-//    }
-//
-//    return !errorOccurred;
-//}
+ 
 
 bool process_numbers_and_fill_set(char* str, set* targetSet) {
     bool errorOccurred = false;
