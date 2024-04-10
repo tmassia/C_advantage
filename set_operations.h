@@ -9,14 +9,14 @@
 #define _crt_secure_no_warnings
 #pragma warning (disable: 4996)	/* hide warning*/
 
-#define MAX_SET_SIZE 128     // מספר התאים במערך, מכיוון שיש לנו 128 אפשרויות  unsigned char
+#define MAX_SET_SIZE 128      
 
 
 typedef struct {
     unsigned char elements[MAX_SET_SIZE];
 } set;
 
-//   הגדרת המשתנים החיצוניים
+ 
 extern set A, B, C, D, E, F;
 
 
